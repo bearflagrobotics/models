@@ -210,7 +210,7 @@ def _run_inference(output_dir=None,
           for j in range(len(im_batch)):
             color_map = util.normalize_depth_for_display(
                 np.squeeze(est_depth[j]))
-            visualization = np.concatenate((im_batch[j], color_map), axis=0)
+            visualization = im_batch[j]
             # Save raw prediction and color visualization. Extract filename
             # without extension from full path: e.g. path/to/input_dir/folder1/
             # file1.png -> file1
